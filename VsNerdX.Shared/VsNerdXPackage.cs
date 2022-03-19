@@ -1,19 +1,13 @@
 ﻿using EnvDTE;
 using EnvDTE80;
-using System.Diagnostics.CodeAnalysis;
-using System.Runtime.InteropServices;
-using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using System;
+using System.Runtime.InteropServices;
+using System.Threading;
 using VsNerdX.Core;
 using VsNerdX.Dispatcher;
-using System.Threading;
-using System;
 using DebugLogger = VsNerdX.Util.DebugLogger;
-using Microsoft.VisualStudio.OLE.Interop;
-#if Vs19
-using IAsyncServiceProvider = Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider;
-#endif
 
 namespace VsNerdX
 {
@@ -21,8 +15,6 @@ namespace VsNerdX
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]
     [ProvideAutoLoad(UIContextGuids80.NoSolution, PackageAutoLoadFlags.BackgroundLoad)]
     [Guid(PackageGuidString)]
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
     public sealed class VsNerdXPackage : AsyncPackage, IAsyncLoadablePackageInitialize
     {
         public const string PackageGuidString = "c8973938-38ba-4db7-9798-11c7f5b4bc1f";

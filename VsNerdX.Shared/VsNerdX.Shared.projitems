@@ -17,6 +17,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Command\Directory\OpenOrCloseNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Command\ExecutionContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Command\ExecutionResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Command\FileSystem\AddItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Command\FileSystem\AddClass.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Command\FileSystem\CopyFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Command\FileSystem\CopyPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Command\FileSystem\CopyText.cs" />

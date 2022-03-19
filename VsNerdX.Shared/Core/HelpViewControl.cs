@@ -76,6 +76,8 @@ namespace VsNerdX.Core
 
                 new Bold(new Run(" File node mappings")), new LineBreak(),
                 new Run("--------------------------"), new LineBreak(),
+                new Bold(new Run(" a")), new Run(": add new item"), new LineBreak(),
+                new Bold(new Run(" n")), new Run(": add new class"), new LineBreak(),
                 new Bold(new Run(" <Enter>")), new Run(": open file"), new LineBreak(),
                 new Bold(new Run(" go")), new Run(": preview file"), new LineBreak(),
                 new Bold(new Run(" i")), new Run(": open split"), new LineBreak(),

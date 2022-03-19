@@ -5,24 +5,20 @@ using static VsNerdX.VsNerdXPackage;
 
 namespace VsNerdX.Command.Navigation
 {
-    public class OpenVSplit : ICommand
+    public class AddItem : ICommand
     {
         private readonly IHierarchyControl _hierarchyControl;
 
-        public OpenVSplit(IHierarchyControl hierarchyControl)
+        public AddItem(IHierarchyControl hierarchyControl)
         {
-            this._hierarchyControl = hierarchyControl;
+            _hierarchyControl = hierarchyControl;
         }
 
         public ExecutionResult Execute(IExecutionContext executionContext, Keys key)
         {
             try
             {
-                //Dte.ExecuteCommand("SolutionExplorer.ToggleSingleClickPreview");
-                //Dte.ExecuteCommand("Window.ActivateDocumentWindow");
-                //Dte.ExecuteCommand("Window.KeepTabOpen");
-                Dte.ExecuteCommand("View.Open");
-                Dte.ExecuteCommand("Window.NewVerticalTabGroup");
+                Dte.ExecuteCommand("Project.AddNewItem");
             }
             catch (Exception e) { }
 
